@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+   - name: cmd
+     command: uname -a
+     register: pi
+
+   - debug:
+      msg: "output={{ pi }}"
